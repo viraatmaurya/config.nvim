@@ -2,6 +2,6 @@
 
 
 require("config.lazy")
-require("settings")
 require("keymapping")
+require("settings")
 
