@@ -29,11 +29,11 @@ end, { desc = "Next error/warning todo comment" })
 
 vim.keymap.set("n", "<C-a>", "ggVG", { noremap = true, silent = true })
 
--- Map Ctrl+h/j/k/l for motions in insert mode
--- vim.keymap.set("i", "<A-h>", "<Left>", { noremap = true, silent = true })
--- vim.keymap.set("i", "<A-j>", "<Down>", { noremap = true, silent = true })
--- vim.keymap.set("i", "<A-k>", "<Up>", { noremap = true, silent = true })
--- vim.keymap.set("i", "<A-l>", "<Right>", { noremap = true, silent = true })
+--Map Ctrl+h/j/k/l for motions in insert mode
+vim.keymap.set("i", "<C-h>", "<Left>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-j>", "<Down>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-k>", "<Up>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true })
 --
 --HACK: Some custom keymapping for the comming back and going end of line
 
