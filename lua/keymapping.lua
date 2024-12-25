@@ -55,4 +55,22 @@ vim.keymap.set("n", "<leader>rf", "ggVG<Plug>SnipRun", { desc = "Run file" })
 -- Clear SnipRun output
 vim.keymap.set('n', '<C-x>', '<cmd>SnipReset<CR>', { noremap = true, silent = true, desc = 'Clear Sniprun output' })
 vim.keymap.set('n', '<C-l>', '<cmd>SnipClose<CR>', { noremap = true, silent = true, desc = 'Close Sniprun' })
+--HACK: kemapping for the line up down and copy paste
+
+vim.api.nvim_set_keymap('n', '<A-j>', ':m .+1<CR>==', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<A-j>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<A-k>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+
+
+
+-- Keybindings for copying lines up and down
+vim.api.nvim_set_keymap('n', '<A-S-j>', 'yyp', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<A-S-k>', 'yyP', { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap('v', '<A-S-j>', 'y`>p', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<A-S-k>', 'y`<P', { noremap = true, silent = true })
+
+
+--HACK: kebindings for finding duplicates like control-d with multiple curser.
 
