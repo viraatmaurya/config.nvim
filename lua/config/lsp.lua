@@ -19,10 +19,10 @@ end
 local lspconfig = require("lspconfig")
 
 -- Example: Python (pyright), JavaScript/TypeScript (tsserver), and Lua
-local servers = { "pyright", "ts_ls", "lua_ls" }
+local servers = { "pyright", "clangd"  }
 
 for _, server in ipairs(servers) do
     lspconfig[server].setup {
         on_attach = on_attach, -- Attach keybindings
     }
-end
+  end
