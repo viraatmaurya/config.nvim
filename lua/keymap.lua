@@ -1,3 +1,26 @@
+-- [[ Basic Keymaps ]]
+--  See `:help vim.keymap.set()`
+
+
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+-- Diagnostic keymaps
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -- Telescope Keymapping
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
@@ -19,37 +42,7 @@ vim.keymap.set("i", "<C-h>", "<Left>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-j>", "<Down>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-k>", "<Up>", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-l>", "<Right>", { noremap = true, silent = true })
---
 
-
---Keymapping for snip run plugin
--- Execute current liniie
-vim.keymap.set("n", "<leader>r", "<Plug>SnipRun", { desc = "Run current line" })
-
--- Execute a visual selection
-vim.keymap.set("v", "<leader>r", "<Plug>SnipRun", { desc = "Run selection" })
-
--- Execute the whole file
-vim.keymap.set("n", "<leader>rf", "ggVG<Plug>SnipRun", { desc = "Run file" })
-
--- Clear SnipRun output
-vim.keymap.set('n', '<C-x>', '<cmd>SnipReset<CR>', { noremap = true, silent = true, desc = 'Clear Sniprun output' })
-vim.keymap.set('n', '<C-l>', '<cmd>SnipClose<CR>', { noremap = true, silent = true, desc = 'Close Sniprun' })
-
-vim.api.nvim_set_keymap('n', '<A-j>', ':m .+1<CR>==', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<A-j>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<A-k>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
-
-
-
--- Copy line down
-vim.api.nvim_set_keymap("n", "<A-S-j>", "yyp", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<A-S-j>", "ygvP`>p", { noremap = true, silent = true })
-
--- Copy line up
-vim.api.nvim_set_keymap("n", "<A-S-k>", "yyP", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("v", "<A-S-k>", "ygvP`<P", { noremap = true, silent = true })
 
 
 --Keybindings save file using C-s in both inser and nomal mode 
