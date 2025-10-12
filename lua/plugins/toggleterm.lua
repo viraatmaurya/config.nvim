@@ -30,25 +30,24 @@ return {
 		-- Function to compile and show status
 		function _G.compile_command(cmd)
 			if not cmd or cmd == "" then
-				cmd = vim.fn.input("COMMAND: ", " ", "shellcmd")
+				cmd = vim.fn.input(":", "", "shellcmd")
 			end
 			local start_time = vim.loop.hrtime()
 			compile_term.cmd = cmd
 			compile_term:toggle()
 			compile_term:send(cmd .. "\n")
-
-			-- watch for exit code
-			vim.defer_fn(function()
-				local elapsed = (vim.loop.hrtime() - start_time) / 1e9
-				print(("✅ Compilation finished in %.2fs"):format(elapsed))
-			end, 2000)
 		end
 
 		-- Keybindings
-		vim.keymap.set("n", "<leader>c", function()
+		vim.keymap.set({ "n", "t" }, "<C-;>", function()
 			compile_command()
 		end, { desc = "Run compilation command in floating terminal" })
 
-		vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm direction=float<CR>", { desc = "Toggle terminal" })
+		vim.keymap.set(
+			{ "n", "t" },
+			"<C-/>",
+			"<cmd>ToggleTerm direction=float<CR>",
+			{ desc = "Toggle floating terminal" }
+		)
 	end,
 }
