@@ -34,3 +34,6 @@ vim.o.confirm = true
 
 require("config.lazy")
 require("keymap")
+
+local lspconfig = require("lspconfig")
+local capabilities = require("blink.cmp").get_lsp_capabilities()
