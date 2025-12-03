@@ -2,8 +2,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 vim.g.have_nerd_font = true
-
-vim.o.number = true
+vim.opt.number = true -- show the current line number
+vim.opt.relativenumber = true -- show relative numbers
 vim.o.mouse = a
 
 vim.schedule(function()
@@ -28,12 +28,13 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 5
-
+vim.opt.scrolloff = 10
 vim.o.confirm = true
 
 require("config.lazy")
 require("keymap")
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
-local lspconfig = require("lspconfig")
-local capabilities = require("blink.cmp").get_lsp_capabilities()
+vim.opt.showmode = false

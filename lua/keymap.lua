@@ -85,3 +85,12 @@ end, { desc = "Duplicate line down" })
 vim.keymap.set("i", "<C-A-k>", function()
 	duplicate_line_insert("up")
 end, { desc = "Duplicate line up" })
+
+------
+-- Alt+e → End of line
+vim.keymap.set("n", "<M-e>", "$")
+vim.keymap.set("i", "<M-e>", "<Esc>$a")
+
+-- Alt+f → Start of line
+vim.keymap.set("n", "<M-f>", "0")
+vim.keymap.set("i", "<M-f>", "<Esc>i")
