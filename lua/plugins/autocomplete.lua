@@ -1,4 +1,10 @@
-return {}
+return {
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true,
+		-- use opts = {} for passing setup options
+		-- this is equivalent to setup({}) function
+	}
 -- return {
 -- 	{ -- Autoformat
 -- 		"stevearc/conform.nvim",
@@ -123,11 +129,4 @@ return {}
 -- 			signature = { enabled = true },
 -- 		},
 -- 	},
--- 	{
--- 		"windwp/nvim-autopairs",
--- 		event = "InsertEnter",
--- 		config = true,
--- 		-- use opts = {} for passing setup options
--- 		-- this is equivalent to setup({}) function
--- 	},
--- }
+

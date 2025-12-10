@@ -1,5 +1,4 @@
--- [[ Basic Keymaps ]]
---  See `:help vim.keymap.set()`
+--- [[ Basic Keymaps ]]
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
@@ -94,3 +93,4 @@ vim.keymap.set("i", "<M-e>", "<Esc>$a")
 -- Alt+f → Start of line
 vim.keymap.set("n", "<M-f>", "0")
 vim.keymap.set("i", "<M-f>", "<Esc>i")
+

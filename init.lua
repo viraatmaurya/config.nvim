@@ -31,10 +31,17 @@ vim.o.splitbelow = true
 vim.opt.scrolloff = 10
 vim.o.confirm = true
 
-require("config.lazy")
-require("keymap")
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 vim.opt.showmode = false
+
+
+
+
+
+----------Custom imports------
+------------------------------		
+require("config.lazy")
+require("keymap")
